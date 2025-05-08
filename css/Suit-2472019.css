@@ -9,29 +9,69 @@ body {
     grid-template-areas:
     "p s c"
     "r r r";
-    margin: 1rem;
+    background-color: tan;
 }
 
 div {
-    padding: 1rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1.2rem;
 }
 
 .player-container {
     grid-area: p;
-    background-color: lightcoral;
+    /* background-color: pink; */
+    color: red;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .separator {
     grid-area: s;
-    background-color: lightslategrey;
+    /* background-color: lightslategrey; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
 .computer-container {
     grid-area: c;
-    background-color: lightseagreen;
+    /* background-color: skyblue; */
+    color: blue;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+div > img {
+    text-transform: none;
+    font-weight: normal;
+    color: black;
+    margin: 20vh auto;
+    width: 15rem;
+    height: 15rem;
 }
 
 .result-box {
     grid-area: r;;
-    background-color: yellow;
+    /* background-color: yellow; */
+    color: firebrick;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+    body {
+        grid-template-areas:
+        "p"
+        "s"
+        "c"
+        "r";
+    }
+    div > img {
+        width: 10rem;
+        height: 10rem;
+        margin: 5vh auto 2vh;
+    }
 }

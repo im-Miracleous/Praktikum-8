@@ -9,16 +9,42 @@
 </head>
 <body>
     <div class="player-container">
-        Player
+        <p>Player</p>
+        <img src="/img/1.jpg" alt="Player's number choice">
     </div>
     <div class="separator">
-        Separator Line
+        <p>vs</p>
     </div>
     <div class="computer-container">
-        Computer
+        <p>Computer</p>
+        <img src="/img/2.jpg" alt="Computer's number choice">
     </div>
     <div class="result-box">
-        test
+        <p></p>
     </div>
+
+    <script>
+        const playerNumber = document.querySelector('.player-container img');
+        const computerNumber = document.querySelector('.computer-container img');
+        const resultBox = document.querySelector('.result-box p');
+
+        const playerChoice = prompt("Enter a number between 1 to 9: ");
+        if (playerChoice < 1 || playerChoice > 9) {
+            alert("Angka harus dari 1-9");
+        }
+
+        const computerChoice = Math.ceil(Math.random() * 9);
+
+        playerNumber.src = `/img/${playerChoice}.jpg`;
+        computerNumber.src = `/img/${computerChoice}.jpg`;
+        
+        if (playerChoice === computerChoice) {
+            resultBox.textContent = "Draw";
+        } else if (playerChoice > computerChoice) {
+            resultBox.textContent = "Player win";
+        } else {
+            resultBox.textContent = "Player lose";
+        }
+    </script>
 </body>
 </html>
