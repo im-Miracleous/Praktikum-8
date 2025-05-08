@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile Card Editor</title>
+    <link rel="stylesheet" href="/css/ProfileEditor-2472019.css">
+</head>
+<body>
+    <div class="card">
+
+        <div class="card-title">
+            <h1>Profile Card Editor</h1>
+        </div>
+
+        <div class="card-info">
+            <img id="infoImg" src="" alt="Profile picture">
+            <h3 id="infoName">John Doe</h3>
+            <p id="infoDesc">Web Developer</p>
+        </div>
+
+        <div class="form">
+            <form method="post">
+                <input type="text" id="name" maxlength="30" placeholder="Enter new name">
+                <input type="text" id="bio" maxlength="100" placeholder="Enter new bio">
+                <input type="url" id="imgUrl" placeholder="Enter image URL">
+                <input type="button" value="Update profile" onclick="ganti()">
+                <input type="reset" value="Reset" onclick="del()">
+            </form>
+        </div>
+
+        <script>
+            let Name = document.getElementById("infoName");
+            let Desc = document.getElementById("infoDesc");
+            let Image = document.getElementById("infoImg");
+
+            
+
+            function ganti() {
+                let input_name = document.getElementById("name").value;
+                let input_bio = document.getElementById("bio").value;
+                let input_url = document.getElementById("imgUrl").value;
+
+                Name.innerHTML = input_name;
+                Desc.innerHTML = input_bio;
+                Image.src = input_url;
+            }
+
+            function del() {
+                Name.innerHTML = "John Doe".value;
+                Desc.innerHTML = "Web Developer".value;
+            }
+        </script>
+
+    </div>
+</body>
+</html>

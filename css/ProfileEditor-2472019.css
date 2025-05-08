@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card {
+    margin: 2rem;
+    padding: 2rem;
+    border: 2px solid black;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.card-title {
+    margin: 1rem;
+}
+
+.card-info {
+    margin: 2rem;
+}
+
+#infoImg, #infoName, #infoDesc {
+    margin: 0.75rem;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form > form input {
+    width: 18rem;
+    margin: 5px;
+    padding: 5px 25px;
+}
+
+.form > form input[type=button], .form > form input[type=reset] {
+    width: 17rem;
+    background: #00b300;
+    color: #FFF;
+    border: none;
+}
+
+.form > form input[type=button]:hover, .form > form input[type=reset]:hover {
+    background: #008000;
+    transition: 0.2s;
+}
+

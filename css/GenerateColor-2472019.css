@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body, #body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFF;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.items {
+    padding: 1rem;
+    margin: 5px;
+}
+
+.item {
+    margin: 5px;
+}
+
+#code {
+    font-weight: bold;
+}
+
+button {
+    padding: 5px 25px;
+}
